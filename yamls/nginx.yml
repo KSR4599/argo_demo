@@ -17,5 +17,3 @@ spec:
       containers:
       - image: swe_tomcat_1
         name: ksreddy4599/swe_tomcat_1:latest
-        ports:
-        - containerPort: 8080
