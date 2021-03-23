@@ -2,18 +2,20 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: nginx
-  name: nginx
+    app: swe
+  name: swe
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
-      app: nginx
+      app: swe
   template:
     metadata:
       labels:
         app: nginx
     spec:
       containers:
-      - image: nginx
-        name: nginx
+      - image: swe_tomcat_1
+        name: ksreddy4599/swe_tomcat_1:latest
+        ports:
+        - containerPort: 8080
